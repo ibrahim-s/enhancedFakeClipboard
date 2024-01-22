@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 'enhancedFakeClipboard' '2.2'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2024-01-21 23:33+0200\n"
-"PO-Revision-Date: 2024-01-22 01:12+0200\n"
+"POT-Creation-Date: 2024-01-23 01:19+0200\n"
+"PO-Revision-Date: 2024-01-23 01:23+0200\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,31 +18,38 @@ msgstr ""
 "X-Generator: Poedit 2.0.7\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#: addon\globalPlugins\enhancedFakeClipboard.py:28
+#. Translations: Message to announce select all action.
+#: addon\globalPlugins\enhancedFakeClipboard.py:29
 msgid "Select all"
 msgstr ""
 
-#: addon\globalPlugins\enhancedFakeClipboard.py:29
+#. Translations: Message to announce cut action.
+#: addon\globalPlugins\enhancedFakeClipboard.py:31
 msgid "Cut"
 msgstr ""
 
-#: addon\globalPlugins\enhancedFakeClipboard.py:30
+#. Translations: Message to announce copy action.
+#: addon\globalPlugins\enhancedFakeClipboard.py:33
 msgid "Copy"
 msgstr ""
 
-#: addon\globalPlugins\enhancedFakeClipboard.py:31
+#. Translations: Message to announce paste action.
+#: addon\globalPlugins\enhancedFakeClipboard.py:35
 msgid "Paste"
 msgstr ""
 
-#: addon\globalPlugins\enhancedFakeClipboard.py:72
+#. Translations: Message displayed when no text selected.
+#: addon\globalPlugins\enhancedFakeClipboard.py:77
 msgid "no selection"
 msgstr ""
 
-#: addon\globalPlugins\enhancedFakeClipboard.py:97
+#. Translations: Message displayed when no files selected.
+#: addon\globalPlugins\enhancedFakeClipboard.py:103
 msgid "No file selected"
 msgstr ""
 
-#: addon\globalPlugins\enhancedFakeClipboard.py:101
+#. Translations: Message to denote that there are no files in clipboard.
+#: addon\globalPlugins\enhancedFakeClipboard.py:108
 msgid "No files in clipboard"
 msgstr ""
 
