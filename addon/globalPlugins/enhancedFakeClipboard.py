@@ -25,9 +25,13 @@ import addonHandler
 addonHandler.initTranslation()
 
 messagesDict={
+	# Translations: Message to announce select all action.
 	"control+a":_("Select all"),
+	# Translations: Message to announce cut action.
 	"control+x":_("Cut"),
+	# Translations: Message to announce copy action.
 	"control+c":_("Copy"),
+	# Translations: Message to announce paste action.
 	"control+v":_("Paste")
 }
 
@@ -69,6 +73,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				gesture.send()
 				return
 			if not self.isSelectedText() and (myGesture=="control+x" or myGesture=="control+c"):
+				# Translations: Message displayed when no text selected.
 				ui.message(_("no selection"))
 				return
 			if myGesture== "control+v" or myGesture=="control+x" or myGesture=="control+c":
@@ -94,10 +99,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if focus.role==15 :
 			#log.info('start of list item block...')
 			if controlTypes.STATE_SELECTED not in focus.states and (myGesture=="control+x" or myGesture=="control+c"):
+				# Translations: Message displayed when no files selected.
 				ui.message(_("No file selected"))
 				return
 			# clipboard contains text and not files.
 			if myGesture== "control+v" and self.clipboardHasText():
+				# Translations: Message to denote that there are no files in clipboard.
 				ui.message(_("No files in clipboard"))
 				return
 			else:
