@@ -15,6 +15,7 @@ import scriptHandler
 import os
 import textInfos
 import controlTypes
+import NVDAObjects
 from logHandler import log
 
 if hasattr(controlTypes, 'State'):
@@ -67,16 +68,31 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def script_fakeClipboardAnouncement(self,gesture):
 		focus = api.getFocusObject()
 		myGesture= ("+".join(gesture.modifierNames)+"+"+gesture.mainKeyName)
-#dealing with regions like editableText for 8 and cumboBox as in google search box for 13
-		if focus.role in [8, 13]:
+		#dealing with regions like editableText for 8 and cumboBox as in google search box for 13
+		# 52 is ROLE.Document, denoting notepad in windows11.
+		if focus.role in (8, 13, 52):
+			# copy and paste in readonly edit controls.
 			if controlTypes.STATE_READONLY in focus.states and (myGesture == "control+x" or myGesture== "control+v"):
 				gesture.send()
 				return
-			if not self.isSelectedText() and (myGesture=="control+x" or myGesture=="control+c"):
+			# copy and text not selected.
+			if not self.isSelectedText() and myGesture=="control+c":
+				#log.info('under copy and text not selected ind edit block')
+				ui.message(_("no selection"))
+				return
+			# cut and text not selected ind edit controls, or in focus mode
+			if (not self.isSelectedText() and myGesture== "control+x" ) and (not focus.treeInterceptor or (focus.treeInterceptor and focus.treeInterceptor.passThrough)):
 				# Translations: Message displayed when no text selected.
 				ui.message(_("no selection"))
 				return
-			if myGesture== "control+v" or myGesture=="control+x" or myGesture=="control+c":
+			# copy and cut while text selected in focus mode.
+			if self.isSelectedText() and focus.treeInterceptor and focus.treeInterceptor.passThrough and (myGesture=="control+x" or myGesture=="control+c"):
+				gesture.send()
+				ui.message(messagesDict[myGesture])
+				return
+			# paste in focus mode
+			if focus.treeInterceptor and focus.treeInterceptor.passThrough and myGesture== "control+v" :
+				#log.info('under condition: treeInterceptor and passThrough if myGesture== "control+v"  : in edit block')
 				gesture.send()
 				ui.message(messagesDict[myGesture])
 				return
@@ -119,14 +135,19 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				globalMapScripts.extend(globalMap.getScriptsForGesture(identifier))
 		treeInterceptor = focus.treeInterceptor
 		if treeInterceptor and treeInterceptor.isReady:
-			if myGesture=="control+c" or myGesture=="control+a":
+			if myGesture=="control+c" or myGesture== "control+a":# or myGesture== "control+x":
+				#log.info('trying to get func in treeInterceptor...')
 				func = scriptHandler._getObjScript(treeInterceptor, gesture, globalMapScripts)
+				#log.info(f'func from scriptHandler._getObjScript: {func}')
 				if func and (not treeInterceptor.passThrough or getattr(func,"ignoreTreeInterceptorPassThrough",False)):
 					#log.info(f'func: {func}')
 					#func(treeInterceptor)
 					# Change func calling, for the previous way has produced an error in native copy in firefox.
 					scriptHandler.executeScript(func, gesture)
 					return
+			elif myGesture in ("control+x", "control+v") and isinstance(focus.treeInterceptor, NVDAObjects.window.winword.WordDocumentTreeInterceptor ):
+				ui.message(messagesDict[myGesture])
+				return
 			else:
 				return
 		ui.message(messagesDict[myGesture])
