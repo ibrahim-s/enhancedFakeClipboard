@@ -7,6 +7,6 @@ import addonHandler
 def onInstall():
 	for addon in addonHandler.getAvailableAddons():
 		if addon.name == 'fakeClipboardAnouncement':
-			if not myAddon.isPendingRemove:
+			if not addon.isPendingRemove:
 				addon.requestRemove()
 			return
