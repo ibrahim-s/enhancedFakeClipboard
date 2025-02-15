@@ -26,7 +26,7 @@ addon_info = {
 	"addon_description": _("""NVDA speaks when putting text on to and from clip bord,
 mainly for copy, cut, paste and select all actions."""),
 	# version
-	"addon_version": "2.2.4",
+	"addon_version": "2.2.5",
 	# Author(s)
 	"addon_author": "Jennifer Wenson <jwens82@gmail.com>, Ibrahim Hamadeh<ibra.hamadeh@hotmail.com>",
 	# URL for the add-on documentation support
@@ -38,7 +38,7 @@ mainly for copy, cut, paste and select all actions."""),
 	# Minimum NVDA version supported (e.g. "2018.3.0", minor version is optional)
 	"addon_minimumNVDAVersion": "2019.3.0",
 	# Last NVDA version supported/tested (e.g. "2018.4.0", ideally more recent than minimum version)
-	"addon_lastTestedNVDAVersion": "2024.1.0",
+	"addon_lastTestedNVDAVersion": "2025.1.0",
 	# Add-on update channel (default is None, denoting stable releases,
 	# and for development releases, use "dev".)
 	# Do not change unless you know what you are doing!

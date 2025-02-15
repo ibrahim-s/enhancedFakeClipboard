@@ -2,7 +2,7 @@
 
 *	Author: Jennifer Wenson, تعديل ابراهيم حمادة
 *	التوافُق : NVDA الإصدار 2019.3 و ما بعد
-*	تنزيل [الإصدار 2.2.4][1]
+*	تنزيل [الإصدار 2.2.5][1]
 
 الغرض الرئيسي من هذه الإضافة هو الإعلان عن إجراءات النسخ والقص واللصق وتحديد الكل على لوحة المفاتيح.
 
@@ -20,6 +20,11 @@
 
 وربما تكون هناك ميزات معدلة أخرى، فمن الأفضل أن تجدها بنفسك.
 
+### التغييرات في 2.2.5 ###
+
+*	تحديث آخر إصدار تم اختباره إلى 2025.1 ، للتوافق  مع إصدارات NVDA الحديثة. 
+*	ترجمةْ الإضافة إلى اللغة الروسية ، بمساهمة مِن Kostenkov-2021.
+
 ### التغييرات في 2.2.4 ###
 
 *	ترجمةْ الإضافة للغة الأوكرانية بالتعاون مع George-br.
@@ -36,4 +41,4 @@
 
 *	Initial version on github.
 
-[1]: https://github.com/ibrahim-s/enhancedFakeClipboard/releases/download/2.2.4/enhancedFakeClipboard-2.2.4.nvda-addon
+[1]: https://github.com/ibrahim-s/enhancedFakeClipboard/releases/download/2.2.5/enhancedFakeClipboard-2.2.5.nvda-addon

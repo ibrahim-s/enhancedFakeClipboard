@@ -2,7 +2,7 @@
 
 *	Author: Jennifer Wenson, modified by Ibrahim Hamadeh
 *	Compatibility: NVDA version 2019.3 and later
-*	Download [version 2.2.4][1]
+*	Download [version 2.2.5][1]
 
 The main purpose of this addon, is to announce the actions of copy, cut, paste, and select all on keyboard.
 
@@ -20,6 +20,11 @@ and like wise, in a folder if you want to copy or cut a file and it is not selec
 
 And may be there are other modified features, you'd  better find yourself.
 
+### Changes for 2.2.5 ###
+
+*	Update last tested version to 2025.1, to comply with recent NVDA releases. 
+*	Add Russian documentation, contributed by Kostenkov-2021.
+
 ### Changes for 2.2.4 ###
 
 *	Add Ukrainian localization and documentation by @George-br.
@@ -36,4 +41,4 @@ And may be there are other modified features, you'd  better find yourself.
 
 *	Initial version on github.
 
-[1]: https://github.com/ibrahim-s/enhancedFakeClipboard/releases/download/2.2.4/enhancedFakeClipboard-2.2.4.nvda-addon
+[1]: https://github.com/ibrahim-s/enhancedFakeClipboard/releases/download/2.2.5/enhancedFakeClipboard-2.2.5.nvda-addon
