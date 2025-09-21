@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: 'Улучшенный фальшивый анонс буфера обмена' '2.2'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2024-01-23 01:19+0200\n"
-"PO-Revision-Date: 2024-05-21 21:49+0300\n"
+"PO-Revision-Date: 2025-09-20 05:05+0300\n"
 "Last-Translator: Danil Kostenkov <danilkostenkov38@gmail.com>\n"
 "Language-Team: Umut KORKMAZ <danilkostenkov38@gmail.com>\n"
 "Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Poedit 3.7\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #. Translations: Message to announce select all action.
@@ -58,7 +58,7 @@ msgstr "В буфере обмена нет файлов"
 #. to be shown on installation and add-on information found in Add-ons Manager.
 #: buildVars.py:23
 msgid "Enhanced Fake Clipboard"
-msgstr "Улучшенный фальшивый анонс буфера обмена"
+msgstr "Enhanced Fake Clipboard (Улучшенное озвучивание операций буфера обмена)"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
