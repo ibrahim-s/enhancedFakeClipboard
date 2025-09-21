@@ -1,4 +1,3 @@
-### Changes for 2.2.5 ###
+### Changes for 2.2.6 ###
 
-*	Update last tested version to 2025.1, to comply with recent NVDA releases. 
-*	Add Russian documentation, contributed by Kostenkov-2021.
+*	Update Russian documentation and localization, by Kostenkov-2021.
