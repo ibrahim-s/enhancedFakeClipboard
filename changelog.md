@@ -1,3 +1,3 @@
-### Changes for 2.2.7 ###
+### Changes for 2.2.8 ###
 
-*	Update last tested version, thus make the addon compatible with NVDA 2026.1 release.
+*	Update Russian localization, by [Kostenkov-2021](https://github.com/Kostenkov-2021).
